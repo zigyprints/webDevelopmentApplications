@@ -9,16 +9,16 @@ const CameraRig = ({ children }) => {
   const snap = useSnapshot(state);
 
   useFrame((state, delta) => {
-    const isBreakpoint = window.innerWidth <= 700;
+    const isBreakpoint = window.innerWidth <= 820;
     const isBreakpoint1 = window.innerWidth <= 526;
-    const isMobile = window.innerWidth <= 400;
+    const isMobile = window.innerWidth <= 414;
     let targetPosition = [-0.4, 0, 1.4];
 
     if (snap.intro) {
       if (isBreakpoint) targetPosition = [0, 0.5, 2];
       if (isBreakpoint1) targetPosition = [0, 1, 2];
 
-      if (isMobile) targetPosition = [0, 1.1, 2];
+      if (isMobile) targetPosition = [0, 0.5, 2];
     } else {
       if (isMobile) targetPosition = [0, 0, 2.5];
       else targetPosition = [0, 0, 2];

@@ -6,11 +6,16 @@ import Backdrop from "./Backdrop";
 import CameraRig from "./CameraRig";
 import Shoes from "./Shoes";
 const CanvasModel = () => {
+  // const isMobile = window.innerWidth <= 400;
+  // console.log(isMobile);
   return (
     // <></>
     <Canvas
       shadows
-      camera={{ position: [0, 0, 0], fov: 30 }}
+      camera={{
+        position: [0, 0, 0],
+        fov: window.innerWidth <= 700 || 414 ? 45 : 30,
+      }}
       gl={{ preserveDrawingBuffer: true }}
       className="w-full max-w-full h-full transition-all ease-in"
     >
