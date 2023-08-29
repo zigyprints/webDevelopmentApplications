@@ -7,7 +7,7 @@ const Backdrop = () => {
   const shadows = useRef();
   return (
     <AccumulativeShadows
-      position={[0, 0, -0.14]}
+      position={[0.7, 0, -0.14]}
       ref={shadows}
       temporal
       frames={60}

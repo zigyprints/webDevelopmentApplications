@@ -14,7 +14,7 @@ const CanvasModel = () => {
       shadows
       camera={{
         position: [0, 0, 0],
-        fov: window.innerWidth <= 700 || 414 ? 45 : 30,
+        fov: window.innerWidth <= 700 || 414 ? 30 : 40,
       }}
       gl={{ preserveDrawingBuffer: true }}
       className="w-full max-w-full h-full transition-all ease-in"

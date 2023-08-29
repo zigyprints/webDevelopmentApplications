@@ -2,7 +2,7 @@ import React from "react";
 import { easing } from "maath";
 import { useSnapshot } from "valtio";
 import { useFrame } from "@react-three/fiber";
-import { Decal, useGLTF, useTexture } from "@react-three/drei";
+import { Decal, useGLTF, useTexture, OrbitControls } from "@react-three/drei";
 import state from "../store";
 
 const Shirt = () => {
@@ -19,6 +19,18 @@ const Shirt = () => {
   return (
     // <></>
     <group key={stateString}>
+      {snap.move && (
+        <OrbitControls
+          enableZoom={false}
+          enableDamping
+          maxPolarAngle={2}
+          minAzimuthAngle={-Math.PI * 0.5}
+          maxAzimuthAngle={Math.PI * 0.5}
+          x
+        />
+      )}
+      {/* <ambientLight intensity={0.5} /> */}
+      {/* <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} /> */}
       <mesh
         castShadow
         geometry={nodes.T_Shirt_male.geometry}
