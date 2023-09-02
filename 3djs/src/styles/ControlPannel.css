@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#ControlPannel {
+    width: 100%;
+    min-height: 100%;
+    background: rgb(16, 34, 39);
+    padding: max(2%, 5px);
+    color: seashell;
+    font-family: "Roboto";
+    text-align: center;
+}
+
+.Controls-cont {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#sizeControls,
+#posControls {
+    border: 2px solid rgba(128, 128, 128, 0.464);
+    border-radius: 12px;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 5%;
+    font-weight: bold;
+    color: antiquewhite;
+}
+
+#sizeControls>input,
+#posControls>input {
+    all: unset;
+    background-color: transparent;
+    color: seashell;
+    font-size: 1em;
+    padding: 5% 2%;
+    border: 2px solid rgba(128, 128, 128, 0.464);
+    margin-top: 0.3em;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -12px;
+    background-color: #5cd5eb;
+    height: 1rem;
+    width: 1rem;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50px;
+    background: rgb(232, 232, 241);
+    cursor: pointer;
+    width: 80%;
+}
+
+#col-light-controls {
+    border: 2px solid rgba(128, 128, 128, 0.464);
+    border-radius: 12px;
+    padding: 1em;
+    font-weight: bold;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#color {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 80%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+#color::-webkit-color-swatch {
+    border-radius: 50px;
+}
+
+#color::-moz-color-swatch {
+    border-radius: 50px;
+}
+
+/* @media only screen and (max-width: 1000px) {
+    #posControls {
+        grid-template-columns: repeat(2, 45%);
+    }   
+} */

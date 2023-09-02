@@ -1,3 +1,10 @@
+Compleated !!
+
+> `cd 3djs`
+> `npm start`
+
+<hr />
+
 Assignment: Frontend Web Development Project
 
 Duration: 1 week
